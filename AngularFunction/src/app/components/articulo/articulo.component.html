@@ -1,0 +1,10 @@
+<div class="card" id="center">
+ 
+  <i type="button" (click)="btnSelect($event,articulo)"> <img class="card-img-top" src={{articulo.image}}></i>
+  <div class="card-body p-0" id="center">
+    <div>
+      <h5>{{articulo.description}}</h5>
+      <span>${{articulo.price}}<sup>{{articulo.cent}}</sup></span>
+    </div>
+  </div>
+</div>

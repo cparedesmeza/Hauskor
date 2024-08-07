@@ -1,0 +1,16 @@
+<div *ngIf="flagVisible;then isEnabled"></div>
+
+<ng-template #isEnabled>
+    <app-header></app-header>
+</ng-template>
+    
+
+
+
+<router-outlet></router-outlet>
+
+<div *ngIf="visible;then esVisible"></div>
+
+<ng-template #esVisible>
+<app-footer></app-footer>
+</ng-template>

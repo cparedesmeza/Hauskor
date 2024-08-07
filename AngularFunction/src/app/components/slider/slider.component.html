@@ -1,0 +1,19 @@
+<div [ngClass] = "{
+'slider-big':!type || type=='slider-big',
+'slider-shop': type == 'slider-shop'
+}">
+    <h1 id="slider">{{nombre}}</h1>
+></div>
+  
+  <!--DIV BUSQUEDA-->
+  <div class="collapse navbar-collapse" id="search">
+    <div class="container-fluid" > 
+      <input type="text" placeholder="Buscar.." [(ngModel)]="valorInput" id="txtSearch">
+      <input type="button" value="Buscar" class="btnBuscar" (click)="btnBuscar($event,true)">
+      
+    </div>
+  </div>
+
+ 
+
+  

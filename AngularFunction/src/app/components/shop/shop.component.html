@@ -1,0 +1,24 @@
+
+<app-header [enable]="'n'"></app-header>
+
+  <app-slider
+  [nombre] ="'Shop'"
+  [type]="'slider-shop'"
+  ></app-slider>
+  <div class="container-fluid" id="center">
+    <h1 id="subheader">Articulos de temporada</h1>
+  </div>
+
+<div class="container-fluid">
+  <div id="container-card">
+    <div *ngFor="let articulo of articles"> 
+      <app-articulo
+       [articulo] = 'articulo'
+       (marcarArticulo) = "mostrarArticulo($event)"
+       (marcarArticulo) = "guardarArticuloBag($event)"
+      ></app-articulo>
+    </div>
+  </div>
+</div>
+
+<app-root [visible]="true"></app-root>

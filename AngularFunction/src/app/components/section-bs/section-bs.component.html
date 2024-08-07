@@ -1,0 +1,41 @@
+<div class="container-fluid" style="padding: 30px;">
+    <div class="row">
+        <div class="col-sm-2" id="center">
+            <h1 id="best-sellers"> Best Sellers</h1>
+        </div>
+        <div class="col-sm-7">
+          
+          <div class="container-fluid"  id="center">
+            
+            <div id="demo" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            
+                <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+            
+                <div class="carousel-item active">
+                  <img src="{{articles[1].image}}" alt="{{articles[5].description}}">
+                </div>
+            
+                <div class="carousel-item">
+                  <img src="{{articles[3].image}}" alt="{{articles[3].description}}">
+                </div>
+            
+                <div class="carousel-item">
+                  <img src="{{articles[8].image}}" alt="{{articles[2].description}}">
+                </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-3" id="center">
+         
+          <div class="container-fluid"  id="btnArticles">
+            <button class="button" [routerLink]="['/shop']"> + Articulos </button>
+          </div>
+
+        
+        </div>
+    </div>
+  </div>

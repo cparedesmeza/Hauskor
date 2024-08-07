@@ -1,0 +1,53 @@
+
+<app-header [enable]="'s'"></app-header>
+<app-home></app-home>
+<div class="container" id="modal" *ngIf="visible">
+
+    <div *ngIf="status == 'success' && visible; then siHayParametros else noHayParametros"></div>
+    
+    <ng-template #siHayParametros>
+        <div class="container-fluid" id="center">
+            <h1 id="subheader">Articulo buscado: {{search}}</h1>
+            <div class="container" id="align-rigth"><i class="bi-x-circle-fill" type="button" (click)="handleClick($event)"></i></div>
+        </div>
+   
+           <div id="modal-body">
+               <div class="card" id="center" *ngIf="articulo">
+                       <img class="card-img-top" src={{articulo.image}}>
+                       <div class="card-body p-0" id="center">
+                         <div>
+                           <h5>{{articulo.description}}</h5>
+                           <span>${{articulo.price}}<sup>{{articulo.cent}}</sup></span>
+                         </div>
+                       </div>
+               </div>            
+               <div>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dolor in justo elementum, id
+                   eleifend tortor iaculis. Integer leo massa, pulvinar ac elit sit amet, aliquet blandit nibh. Proin lobortis
+                   tempus eros at malesuada. Maecenas accumsan porta eros rutrum dictum. Fusce sit amet dolor neque. Vestibulum
+                   quis condimentum nibh. Nulla viverra mi et molestie mollis. Nulla aliquam fermentum faucibus. Morbi ante mi,
+                   porta at elementum id, maximus non nibh. Pellentesque malesuada nibh eu ornare sodales.</p>
+                 
+               </div>
+           </div> 
+
+    </ng-template>
+    <ng-template #noHayParametros>
+        <div class="container-fluid" id="center">
+            <h1 id="subheader">Articulo no encontrado: {{search}}</h1>
+            <div class="container" id="align-rigth"><i class="bi-x-circle-fill" type="button" (click)="handleClick($event)"></i></div>
+        </div>
+    </ng-template>
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+   

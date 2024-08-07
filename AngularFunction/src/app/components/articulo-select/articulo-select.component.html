@@ -1,0 +1,59 @@
+<app-header [enable]="'n'"></app-header>
+<div class="container-fluid" id="bag">
+
+    <div class="container" id="center">
+        <h1 id="subheader">Carrito Compra</h1>
+    </div>
+
+        <div class="container-fluid" id="pedido" *ngFor="let articulo of lastArticles; let i = index">
+
+            <div class="container" id="pedido-img">
+                <img class="mx-auto d-block" src={{articulo.image}}>
+            </div>
+
+            <div class="container" id="pedido-info">
+                <div> 
+                    <h4>{{articulo.description}}</h4>
+                </div>
+                <!--BOTONES DE CANTIDAD-->
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  
+                    <div id="qty-left">
+                        <i class="bi bi-dash-square" type="button" (click)="Disminuir(articulo,i)"></i>
+                    </div>
+
+                    <div id="qty-middle">
+                       
+                        <span>{{cantidad[i]}}</span>
+                    
+                    </div>
+
+                    <div id="qty-rigth">
+                        <i class="bi bi-plus-square" type="button" (click)="Aumentar(i)"></i>
+                    </div> 
+
+                </div>
+                <!--PRECIO DE VENTA POR UNIDAD-->
+                <div id="align-rigth">
+                    <h4>${{articulo.price}}<sup>{{articulo.cent}}</sup></h4> 
+                </div>
+                <!--PRECIO DEl SUBTOTAL-->
+                <div id="align-rigth"> <h4>${{subTotal[i]}}</h4></div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid" >
+            <div class="container" id="center"> <input type="text" id="Total" placeholder="{{total}}" aria-readonly="true" disabled>
+            </div>
+        </div>
+
+        <div class="container" id="container-btns">
+            <button [routerLink]="['/shop']" class="button" id="btn-backward">Volver A Compra</button>
+            <button (click)="btnRealizarCompra()" class="button" id="btn-purchase">Realizar Compra</button>
+        </div>
+
+</div>
+<div class="container-fluid" id="relleno"></div>
+
+<app-root [visible]="true"></app-root>

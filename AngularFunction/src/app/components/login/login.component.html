@@ -1,0 +1,171 @@
+
+<app-root [flagVisible]="false"></app-root>
+
+
+
+<div class="container-XXL" id="principal">
+
+    <div class="container-fluid" id="column-izq">
+        <!--
+        <div class="container" id="image-profile">
+            <img src="../../../assets/images/image.png">
+        </div>-->
+        <div class="container" id="welcomeMsg">
+            <p>CARLOS PAREDES</p>
+        </div>
+        <div class="container" id="Msg">
+            <p>FRONT END JR</p>
+        </div>
+        <div class="container" id="Msg1">
+            <p>WEB DESIGNER</p>
+        </div>
+
+        <div class="container" id="Msg2">
+            <a href="../../../assets/files/Resume Oracle.pdf" download="../../../assets/files/Resume Oracle.pdf">View my resume</a>
+        </div>
+       
+        <div class="container-xl" id="menu-contacto">
+            <a id="home" [routerLink]="['/home']">HOME</a>
+            
+            <a *ngFor="let seccion of secciones" [routerLink]="['/contacto']" [fragment]="seccion"
+                [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+               
+                <div class="wrapper">
+                    <span>{{seccion[0]}}</span>
+                    <span>{{seccion[1]}}</span>
+                    <span>{{seccion[2]}}</span>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="column-der">
+
+        <!-- Seccion 1 Acerca -->
+        <section [id]="secciones[0]">
+            <div class="container-fluid">
+
+                <div class="container" id="bg-text">
+                    {{secciones[0]}}
+                </div>
+              
+                <div class="container" id="content-about">
+
+                    <p>
+                        I'm a competent professionist with the abilities,skills and technical knowledge that allows me to be at the forefront of engineering, always willing to learn new things and improve professionally each day, sharing my knowledge with my teammates to create a great work environment.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Seccion 2 Experiencia -->
+        <section [id]="secciones[1]">
+            <div class="container-fluid" id="experiencia">
+
+                <div class="container" id="bg-text">
+                    {{secciones[1]}}
+                </div>
+            
+                <div class="container" id="exp">
+                    <div id="subHeadExp"><h3>Freelance | Aug 21 - PRESENT</h3></div>    
+                    <div id="content-exp">
+                        <p>Development API RESTFUL using NodeJS and MongoDB.</p>
+                        <p>Development Front-End Portafolio using Angular, Bootstrap, TypeScript, CSS3</p>
+                        <p>Development of firmware for microcontrollers with Embedded C.</p>
+                        <p>Development of Automation applications using LabVIEW and C#.</p>
+                        <div>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>Bootstrap</span>
+                            <span>HTML&CSS3</span>
+                            <span>Angular</span>
+                            <span>NodeJS</span>
+                            <span>MongoDB</span>
+                            <span>Postman</span>
+                            <span>GIT</span>
+                        </div>
+                    </div> 
+                       
+                </div>
+                <div class="container" id="exp">
+                    <div id="subHeadExp"><h3>Service Leader | Nano Ciencias de México | Aug 21 - January 24</h3></div>    
+                    <div id="content-exp">
+                        <p>Maintenance basics of Js web applications for Databases System Control.</p>
+                        <p>Development a control scheduling system to calculate the quotation services and programming the service dates using a Js.</p>
+                        <p>Scheduling of Purchase Orders. Department Manager.</p>
+                        <div>
+                            <span>JavaScript</span>
+                            <span>HTML&CSS3</span>
+                            <span>GIT</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="container" id="exp">
+                    <div id="subHeadExp"><h3>Service Enginner | Nano Ciencias de México | Aug 18 - January 21</h3></div>    
+                    <div id="content-exp">
+                        <p>Maintenance basics of Python desktop applications for equipment control.</p>
+                        <p>Development a control scheduling system to calculate the quotation services using a Js.</p>
+                        <p>Preventive and Corrective maintenance of analytic instrumentation for characterization of materials.</p>
+                        <div>
+                            <span>JavaScript</span>
+                            <span>HTML&CSS3</span>
+                            <span>NodeJS</span>
+                            <span>MySQL</span>
+                            <span>Python</span>
+                            <span>GIT</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="container" id="exp">
+                    <div id="subHeadExp"><h3>RFID TECHNICIAN • ELECTRINET • Nov 17 | July 18</h3></div>    
+                    <div id="content-exp">
+                        <p>Development of basic Android mobile applications for control using Java.</p>
+                        <p>Design and implementation of projects using RFID technology.</p>
+                        <p>Programming of biometric sensors.</p>
+                        <p>Development of desktop applications for handheld RFID readers using their proprietary SDKs. and consum JSON data</p>
+                        <p>RFID Sales Advisor</p>
+                        <div>
+                            <span>JavaScript</span>
+                            <span>HTML&CSS3</span>
+                            <span>GIT</span>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+        </section>
+
+        <section [id]="secciones[2]">
+            <div class="container-fluid">
+                <div class="container-fluid" id="bg-text">{{secciones[2]}}</div>
+                        <div class="container" id="contacto">
+                            <span>
+                                <i class="bi bi-phone"></i>
+                                +52 477 648 3666
+                            </span>
+                            <span>
+                                <i class="bi bi-envelope"></i>
+                                {{correo}}
+                            </span>
+
+                        </div>
+                </div>
+        </section>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<app-root [visible]="false"></app-root>
