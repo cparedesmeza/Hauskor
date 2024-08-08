@@ -1,3 +1,3 @@
 export var Global = {
-    url: 'https://hauskorapi.onrender.com/'
+    url: 'https://hauskorapi.onrender.com/api/'
 };
