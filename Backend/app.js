@@ -7,6 +7,9 @@ var bodyParser = require('body-parser'); // convertir los datos qu se adquieren 
 
 //Ejecutar express para trabajar con (http)
 var app = express();
+app.get('/', (req, res) => {
+    res.send('Hello, world!');
+});
 
 //Cargar ficheros rutas
 var article_routes = require('./routes/article');
