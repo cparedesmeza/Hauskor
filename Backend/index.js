@@ -12,7 +12,7 @@ mongoose.connect(url)
             console.log('Conexion a base de datos correcta!')
 
             //Crear servidor y ponerme a escuchar peticiones http
-            app.listen(port, () =>{
-                console.log('Servidor corriendo en http://localhost:' + port);
-            });
+            app.listen(port, () => {
+                console.log(`Servidor corriendo en http://localhost:${port}`);
+              });
     })
